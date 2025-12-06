@@ -63,7 +63,7 @@ namespace Library.Controllers
                     LoanID = f.BorrowingId,
                     ISBN = f.Borrowing.ISBN,
                     Amount = f.DaysOverdue * settings.DailyFineRate,
-                    FineDate = f.BorrowingDueDate,
+                    FineDate = f.FineDate,
                     isPaid = f.IsPaid,
                     PaidDate = f.PaidDate
                 })

@@ -36,7 +36,7 @@ namespace Library.Models
         /// Calculated property: Number of days the book is/was overdue.
         /// </summary>
         public int DaysOverdue => IsPaid 
-            ? (PaidDate.HasValue ? (PaidDate.Value.Date - BorrowingDueDate.Date).Days : 0) 
-            : (DateTime.Now.Date - BorrowingDueDate.Date).Days;
+            ? (PaidDate.HasValue ? (PaidDate.Value.Date - FineDate.Date).Days : 0) 
+            : (DateTime.Now.Date - FineDate.Date).Days;
     }
 }
